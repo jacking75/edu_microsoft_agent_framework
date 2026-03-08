@@ -1,0 +1,37 @@
+{
+  "gameSettings": {
+    "title": "Dragon Quest Adventure",
+    "version": "1.2.5",
+    "maxLevel": 99,
+    "maxPartySize": 4,
+    "difficultyLevels": ["Easy", "Normal", "Hard", "Nightmare"]
+  },
+  "combat": {
+    "baseDamage": 100,
+    "criticalChance": 0.15,
+    "criticalMultiplier": 2.0,
+    "dodgeChance": 0.10,
+    "turnTimeLimit": 30
+  },
+  "economy": {
+    "goldDropRate": 0.8,
+    "itemDropRate": 0.3,
+    "rareItemChance": 0.05,
+    "shopTaxRate": 0.10
+  },
+  "player": {
+    "baseHP": 500,
+    "baseMP": 200,
+    "baseStamina": 100,
+    "hpPerLevel": 50,
+    "mpPerLevel": 20,
+    "staminaPerLevel": 10
+  },
+  "world": {
+    "totalZones": 12,
+    "totalDungeons": 24,
+    "totalBosses": 15,
+    "fastTravelEnabled": true,
+    "pvpEnabled": false
+  }
+}
