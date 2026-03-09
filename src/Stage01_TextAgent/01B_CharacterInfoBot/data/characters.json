@@ -1,0 +1,176 @@
+{
+  "gameInfo": {
+    "name": "Dragon Quest Adventure",
+    "version": "1.2.5",
+    "lastUpdated": "2025-01-15"
+  },
+  "characters": [
+    {
+      "id": "warrior",
+      "name": "전사",
+      "className": "Warrior",
+      "baseStats": {
+        "hp": 800,
+        "mp": 50,
+        "attack": 45,
+        "defense": 40,
+        "magicResist": 15,
+        "speed": 25,
+        "criticalChance": 0.10
+      },
+      "growthRates": {
+        "hp": 60,
+        "mp": 10,
+        "attack": 8,
+        "defense": 7,
+        "magicResist": 2,
+        "speed": 3
+      },
+      "skills": [
+        "Power Strike",
+        "Shield Bash",
+        "War Cry",
+        "Berserker Rage"
+      ]
+    },
+    {
+      "id": "mage",
+      "name": "마법사",
+      "className": "Mage",
+      "baseStats": {
+        "hp": 300,
+        "mp": 500,
+        "attack": 15,
+        "defense": 12,
+        "magicResist": 50,
+        "speed": 30,
+        "criticalChance": 0.20
+      },
+      "growthRates": {
+        "hp": 20,
+        "mp": 50,
+        "attack": 2,
+        "defense": 2,
+        "magicResist": 8,
+        "speed": 4
+      },
+      "skills": [
+        "Fireball",
+        "Ice Storm",
+        "Lightning Bolt",
+        "Arcane Shield"
+      ]
+    },
+    {
+      "id": "archer",
+      "name": "궁수",
+      "className": "Archer",
+      "baseStats": {
+        "hp": 450,
+        "mp": 150,
+        "attack": 35,
+        "defense": 20,
+        "magicResist": 25,
+        "speed": 45,
+        "criticalChance": 0.25
+      },
+      "growthRates": {
+        "hp": 35,
+        "mp": 20,
+        "attack": 6,
+        "defense": 3,
+        "magicResist": 3,
+        "speed": 7
+      },
+      "skills": [
+        "Multi Shot",
+        "Piercing Arrow",
+        "Poison Arrow",
+        "Eagle Eye"
+      ]
+    },
+    {
+      "id": "healer",
+      "name": "성직자",
+      "className": "Healer",
+      "baseStats": {
+        "hp": 400,
+        "mp": 400,
+        "attack": 20,
+        "defense": 25,
+        "magicResist": 40,
+        "speed": 28,
+        "criticalChance": 0.15
+      },
+      "growthRates": {
+        "hp": 30,
+        "mp": 45,
+        "attack": 3,
+        "defense": 4,
+        "magicResist": 6,
+        "speed": 3
+      },
+      "skills": [
+        "Heal",
+        "Holy Light",
+        "Resurrection",
+        "Divine Protection"
+      ]
+    },
+    {
+      "id": "assassin",
+      "name": "암살자",
+      "className": "Assassin",
+      "baseStats": {
+        "hp": 350,
+        "mp": 200,
+        "attack": 50,
+        "defense": 18,
+        "magicResist": 20,
+        "speed": 55,
+        "criticalChance": 0.35
+      },
+      "growthRates": {
+        "hp": 25,
+        "mp": 25,
+        "attack": 9,
+        "defense": 2,
+        "magicResist": 2,
+        "speed": 8
+      },
+      "skills": [
+        "Backstab",
+        "Shadow Step",
+        "Poison Blade",
+        "Assassinate"
+      ]
+    }
+  ],
+  "classMatchups": [
+    {
+      "className": "warrior",
+      "strongAgainst": ["archer"],
+      "weakAgainst": ["mage"]
+    },
+    {
+      "className": "mage",
+      "strongAgainst": ["warrior"],
+      "weakAgainst": ["assassin"]
+    },
+    {
+      "className": "archer",
+      "strongAgainst": ["mage"],
+      "weakAgainst": ["warrior"]
+    },
+    {
+      "className": "healer",
+      "strongAgainst": ["assassin"],
+      "weakAgainst": ["warrior"]
+    },
+    {
+      "className": "assassin",
+      "strongAgainst": ["mage", "healer"],
+      "weakAgainst": ["archer"]
+    }
+  ]
+}
