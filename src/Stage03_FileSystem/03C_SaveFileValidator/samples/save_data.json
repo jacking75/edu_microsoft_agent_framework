@@ -1,0 +1,15 @@
+{
+  "playerId": "12345",
+  "playerName": "Hero123",
+  "level": 25,
+  "experience": 125000,
+  "inventory": [
+    { "itemId": "sword_001", "quantity": 1 },
+    { "itemId": "potion_hp", "quantity": 5 }
+  ],
+  "questProgress": {
+    "mainQuest": "chapter_3",
+    "sideQuests": ["side_001", "side_003"]
+  },
+  "lastSaveTime": "2025-01-15T10:00:00Z"
+}

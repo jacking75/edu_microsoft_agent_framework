@@ -1,0 +1,32 @@
+[2025-01-15 10:00:01] [INFO] Game server starting...
+[2025-01-15 10:00:02] [INFO] Loading configuration from config.json
+[2025-01-15 10:00:03] [INFO] Database connection established
+[2025-01-15 10:00:05] [INFO] Server listening on port 8080
+[2025-01-15 10:00:10] [INFO] Player "Hero123" logged in from 192.168.1.100
+[2025-01-15 10:00:15] [INFO] Player "Mage456" logged in from 192.168.1.101
+[2025-01-15 10:00:20] [WARNING] High memory usage detected: 85%
+[2025-01-15 10:00:25] [INFO] Player "Warrior789" logged in from 192.168.1.102
+[2025-01-15 10:00:30] [ERROR] Failed to load asset: textures/enemy/dragon.png
+[2025-01-15 10:00:31] [ERROR] NullReferenceException in GameWorld.Update()
+[2025-01-15 10:00:32] [INFO] Auto-save initiated
+[2025-01-15 10:00:35] [INFO] Auto-save completed successfully
+[2025-01-15 10:00:40] [WARNING] Connection timeout for player "Mage456"
+[2025-01-15 10:00:45] [INFO] Player "Mage456" reconnected
+[2025-01-15 10:00:50] [ERROR] Database query timeout: SELECT * FROM players
+[2025-01-15 10:00:55] [INFO] Retry successful for database query
+[2025-01-15 10:01:00] [INFO] Player "Hero123" reached level 25
+[2025-01-15 10:01:05] [INFO] Player "Warrior789" completed quest: "The Dragon's Lair"
+[2025-01-15 10:01:10] [WARNING] CPU usage spike: 92%
+[2025-01-15 10:01:15] [INFO] Garbage collection triggered
+[2025-01-15 10:01:20] [INFO] Memory usage normalized: 62%
+[2025-01-15 10:01:25] [ERROR] Failed to send email notification to admin
+[2025-01-15 10:01:30] [INFO] Player "Archer321" logged in from 192.168.1.103
+[2025-01-15 10:01:35] [INFO] Daily reward distributed to 4 players
+[2025-01-15 10:01:40] [WARNING] Disk space low: 15% remaining
+[2025-01-15 10:01:45] [INFO] Cleanup job started
+[2025-01-15 10:01:50] [INFO] Removed 150 expired session records
+[2025-01-15 10:01:55] [INFO] Disk space recovered: 22% free
+[2025-01-15 10:02:00] [ERROR] Critical: Main database connection lost
+[2025-01-15 10:02:01] [INFO] Switching to backup database
+[2025-01-15 10:02:05] [INFO] Backup database connection established
+[2025-01-15 10:02:10] [INFO] Server status: Normal operation resumed

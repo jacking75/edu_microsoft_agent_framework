@@ -1,0 +1,20 @@
+[2025-01-15 10:00:01] [ERROR] NullReferenceException: Object reference not set to an instance of an object.
+   at Game.Player.Update() in Player.cs:line 45
+[2025-01-15 10:00:15] [ERROR] TimeoutException: Database query timeout after 30000ms
+   at DataManager.ExecuteQuery() in DataManager.cs:line 112
+[2025-01-15 10:00:30] [ERROR] NullReferenceException: Enemy AI failed to initialize
+   at Enemy.SetupAI() in Enemy.cs:line 78
+[2025-01-15 10:00:45] [ERROR] IOException: Failed to write to save file
+   at SaveManager.Save() in SaveManager.cs:line 34
+[2025-01-15 10:01:00] [ERROR] TimeoutException: Network request timeout
+   at NetworkManager.Send() in NetworkManager.cs:line 89
+[2025-01-15 10:01:15] [ERROR] NullReferenceException: UI element not found
+   at UIManager.Update() in UIManager.cs:line 56
+[2025-01-15 10:01:30] [ERROR] InvalidOperationException: Cannot modify collection while iterating
+   at WorldManager.Update() in WorldManager.cs:line 123
+[2025-01-15 10:01:45] [ERROR] NullReferenceException: Audio clip missing
+   at AudioManager.Play() in AudioManager.cs:line 23
+[2025-01-15 10:02:00] [ERROR] TimeoutException: Asset loading timeout
+   at AssetManager.Load() in AssetManager.cs:line 67
+[2025-01-15 10:02:15] [ERROR] IOException: Disk space insufficient
+   at SaveManager.Save() in SaveManager.cs:line 41
