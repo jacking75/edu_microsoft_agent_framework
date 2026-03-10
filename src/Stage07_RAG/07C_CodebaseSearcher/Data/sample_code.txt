@@ -1,0 +1,144 @@
+// Sample C# code snippets for code search demo
+// These represent typical game development code
+
+namespace SampleGame.Services;
+
+/// <summary>
+/// Player inventory management service
+/// </summary>
+public class InventoryService
+{
+    private readonly List<Item> _items = new();
+    private readonly int _maxCapacity;
+
+    public InventoryService(int maxCapacity = 50)
+    {
+        _maxCapacity = maxCapacity;
+    }
+
+    /// <summary>
+    /// Add item to inventory
+    /// </summary>
+    public bool AddItem(Item item)
+    {
+        if (_items.Count >= _maxCapacity)
+        {
+            return false;
+        }
+
+        var existingItem = _items.FirstOrDefault(i => i.Id == item.Id);
+        if (existingItem != null)
+        {
+            existingItem.StackCount += item.StackCount;
+            return true;
+        }
+
+        _items.Add(item);
+        return true;
+    }
+
+    /// <summary>
+    /// Remove item from inventory
+    /// </summary>
+    public bool RemoveItem(string itemId, int count = 1)
+    {
+        var item = _items.FirstOrDefault(i => i.Id == itemId);
+        if (item == null) return false;
+
+        if (item.StackCount > count)
+        {
+            item.StackCount -= count;
+            return true;
+        }
+
+        _items.Remove(item);
+        return true;
+    }
+
+    /// <summary>
+    /// Get all items filtered by type
+    /// </summary>
+    public List<Item> GetItemsByType(ItemType type)
+    {
+        return _items.Where(i => i.Type == type).ToList();
+    }
+
+    /// <summary>
+    /// Sort inventory by value
+    /// </summary>
+    public List<Item> SortByValue(bool descending = true)
+    {
+        return descending 
+            ? _items.OrderByDescending(i => i.Value).ToList()
+            : _items.OrderBy(i => i.Value).ToList();
+    }
+}
+
+/// <summary>
+/// Quest tracking and management
+/// </summary>
+public class QuestService
+{
+    private readonly List<Quest> _activeQuests = new();
+    private readonly List<Quest> _completedQuests = new();
+
+    /// <summary>
+    /// Start a new quest
+    /// </summary>
+    public void StartQuest(Quest quest)
+    {
+        quest.Status = QuestStatus.Active;
+        quest.StartedAt = DateTime.Now;
+        _activeQuests.Add(quest);
+    }
+
+    /// <summary>
+    /// Update quest progress
+    /// </summary>
+    public bool UpdateQuestProgress(string questId, string objectiveId, int progress)
+    {
+        var quest = _activeQuests.FirstOrDefault(q => q.Id == questId);
+        if (quest == null) return false;
+
+        var objective = quest.Objectives.FirstOrDefault(o => o.Id == objectiveId);
+        if (objective == null) return false;
+
+        objective.CurrentProgress = Math.Min(progress, objective.RequiredProgress);
+        
+        if (quest.Objectives.All(o => o.IsCompleted))
+        {
+            CompleteQuest(questId);
+        }
+
+        return true;
+    }
+
+    /// <summary>
+    /// Complete a quest and give rewards
+    /// </summary>
+    public void CompleteQuest(string questId)
+    {
+        var quest = _activeQuests.FirstOrDefault(q => q.Id == questId);
+        if (quest == null) return;
+
+        quest.Status = QuestStatus.Completed;
+        quest.CompletedAt = DateTime.Now;
+        
+        _activeQuests.Remove(quest);
+        _completedQuests.Add(quest);
+
+        // Give rewards
+        Console.WriteLine($"Quest completed: {quest.Title}");
+        Console.WriteLine($"Rewards: {quest.RewardGold} gold, {quest.RewardExp} exp");
+    }
+
+    /// <summary>
+    /// Get daily quests
+    /// </summary>
+    public List<Quest> GetDailyQuests()
+    {
+        return _activeQuests
+            .Where(q => q.Type == QuestType.Daily)
+            .ToList();
+    }
+}
