@@ -1,0 +1,13 @@
+<Solution>
+  <Project Path="Stage01_TextAgent/Stage01_TextAgent.csproj" />
+  <Project Path="Stage02_SingleTool/Stage02_SingleTool.csproj" />
+  <Project Path="Stage03_MultiTool/Stage03_MultiTool.csproj" />
+  <Project Path="Stage04_WebChat/Stage04_WebChat.csproj" />
+  <Project Path="Stage05_Telegram/Stage05_Telegram.csproj" />
+  <Project Path="Stage06_Memory/Stage06_Memory.csproj" />
+  <Project Path="Stage07_MultiAgent/Stage07_MultiAgent.csproj" />
+  <Project Path="Stage08_Browser/Stage08_Browser.csproj" />
+  <Project Path="Stage09_Canvas/Stage09_Canvas.csproj" />
+  <Project Path="Stage10_Voice/Stage10_Voice.csproj" />
+  <Project Path="Stage11_Gateway/Stage11_Gateway.csproj" />
+</Solution>
